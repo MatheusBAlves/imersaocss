@@ -50,16 +50,15 @@ header {
 .menu a {
     display: flex;
     padding: 8px 16px;
-}
-
-
-a {
     color: teal;
     text-decoration: none;
+    transition:  background-color 0.6s, color 0.6s;
 }
 
-a:hover {
+.menu a:hover {
     text-decoration: underline;
+    background-color: teal;
+    color: white;
 }
 
 .site-title,
@@ -87,18 +86,20 @@ a:hover {
 
 
 /* PORTFOLIO */
-
+.contato,
 .portfolio {
     padding: 2em;
-    height: 100vh;
+    min-height: 20vh;
 }
 
+.contato h2,
 .portfolio h2 {
     font-family: 'Source Code Pro', monospace;
     color: whitesmoke;
     font-size: 2.5em;
     margin: 1em;
     text-align: center;
+    text-shadow: -2px 2px 5px black;
 }
 
 .portfolio .grid {
@@ -129,6 +130,31 @@ a:hover {
 
 figcaption {
     color: whitesmoke;
+    font-weight: 600;
+    text-shadow: -1px 1px 6px black;
+}
+
+.contato h2 {
+    text-align: left;
+}
+
+.contato .icons {
+    text-align: center;
+}
+
+.contato a {
+    color: whitesmoke;
+    font-size: 4em;
+    text-decoration: none;
+}
+
+.contato i {
+    transition: text-shadow 0.2s;
+}
+
+.contato i:active,
+.contato i:hover {
+    text-shadow: -2px 2px 7px rgba(0, 0, 0, 0.829);
 }
 
 @media (min-width: 630px) {

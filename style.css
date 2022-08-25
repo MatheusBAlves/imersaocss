@@ -5,7 +5,8 @@
 }
 
 body {
-    background-image: url(./img/fundo.jpg);
+    /* background-image: url(./img/fundo.jpg); */
+    background: linear-gradient(to bottom, #1D3C50, #32596A);
     background-size: 100vw 100vh;
     font-family: 'Source Code Pro', monospace;
     ;
@@ -68,6 +69,7 @@ header {
 }
 
 .site-title {
+    padding-inline: 5px;
     font-size: 3em;
     font-family: 'Press Start 2P', cursive;
     text-shadow: -2px 4px 4px rgba(0, 0, 0, 0.842);
@@ -86,6 +88,10 @@ header {
 
 
 /* PORTFOLIO */
+.portfolio {
+    background: linear-gradient(to top, #1D3C50, #32596A);
+}
+
 .contato,
 .portfolio {
     padding: 2em;

@@ -90,6 +90,7 @@ header {
 /* PORTFOLIO */
 .portfolio {
     background: linear-gradient(to top, #1D3C50, #32596A);
+    background-repeat: repeat-y;
 }
 
 .contato,
@@ -137,6 +138,7 @@ header {
 figcaption {
     color: whitesmoke;
     font-weight: 600;
+    font-size: 14px;
     text-shadow: -1px 1px 6px black;
 }
 
@@ -174,7 +176,7 @@ figcaption {
     .portfolio .grid {
         grid-template-columns: 270px 270px 270px;
         gap: 3em;
-        height: calc(100vh - 48px - 8em);
+        height: calc(100vh - 48px);
         align-content: center;
     }
 

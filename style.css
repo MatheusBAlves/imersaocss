@@ -33,6 +33,7 @@ header {
 }
 
 .menu {
+    z-index: 99;
     background: white;
     position: fixed;
     width: 100vw;
@@ -53,13 +54,31 @@ header {
     padding: 8px 16px;
     color: teal;
     text-decoration: none;
-    transition:  background-color 0.6s, color 0.6s;
+    transition: background-color 0.6s, color 0.6s;
 }
 
 .menu a:hover {
     text-decoration: underline;
     background-color: teal;
     color: white;
+}
+
+.titulo {
+    animation: cubic-bezier(0.175, 0.885, 0.32, 1.275) 1.4s animacaoTitulo ;
+}
+
+
+@keyframes animacaoTitulo {
+
+    from {
+        transform: scale(0.1) translateY(40vh);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
 }
 
 .site-title,
@@ -105,7 +124,7 @@ header {
     color: whitesmoke;
     font-size: 2.5em;
     margin: 1em;
-    text-align: center;
+    text-align: left;
     text-shadow: -2px 2px 5px black;
 }
 
@@ -121,13 +140,15 @@ header {
 
 .img-portfolio {
     width: 240px;
+    height: 118px;
     transition: 0.6s;
     object-fit: contain;
     border-radius: 10px;
 }
 
 .img-portfolio:hover {
-    transform: scale(1.1);
+    transform: scale(1.1) rotate(-2deg);
+    z-index: 4;
 }
 
 .indisponivel:hover {
@@ -140,10 +161,6 @@ figcaption {
     font-weight: 600;
     font-size: 14px;
     text-shadow: -1px 1px 6px black;
-}
-
-.contato h2 {
-    text-align: left;
 }
 
 .contato .icons {
@@ -177,7 +194,7 @@ figcaption {
         grid-template-columns: 270px 270px 270px;
         gap: 3em;
         height: calc(100vh - 48px);
-        align-content: center;
+        align-content: stretch;
     }
 
 }

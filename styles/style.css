@@ -5,13 +5,13 @@
 }
 
 body {
-    /* background-image: url(./img/fundo.jpg); */
-    background: linear-gradient(to bottom, #1D3C50, #32596A);
     background-size: 100vw 100vh;
+    background: linear-gradient(to bottom, #1D3C50, #32596A);
     font-family: 'Source Code Pro', monospace;
-    ;
     font-size: 10px;
 }
+
+
 
 @media (min-width: 400px) {
     body {
@@ -63,7 +63,7 @@ header {
     color: white;
 }
 
-.titulo {
+header .titulo {
     animation: cubic-bezier(0.175, 0.885, 0.32, 1.275) 1.4s animacaoTitulo ;
 }
 
@@ -105,19 +105,14 @@ header {
     font-style: italic;
 }
 
-
-/* PORTFOLIO */
-.portfolio {
-    background: linear-gradient(to top, #1D3C50, #32596A);
-    background-repeat: repeat-y;
-}
-
+.sobre,
 .contato,
 .portfolio {
     padding: 2em;
     min-height: 20vh;
 }
 
+.sobre h2,
 .contato h2,
 .portfolio h2 {
     font-family: 'Source Code Pro', monospace;
@@ -128,9 +123,60 @@ header {
     text-shadow: -2px 2px 5px black;
 }
 
+/* SOBRE */
+
+.sobre{
+    min-height: 100vh;
+}
+
+.sobre > div {
+    display: flex;
+    min-height: 60vh;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.sobre .subtitulo {
+    color: whitesmoke;
+    font-weight: 500;
+    font-size: 1.4em;
+}
+
+.sobre .titulo {
+    color: whitesmoke;
+    font-weight: 900;
+    font-size: 2em;
+    margin: 4px 0 8px 0;
+}
+
+.sobre p {
+    max-width: 450px;
+    font-size: 1.3em;
+    font-weight: 500;
+}
+
+.foto-pessoal {
+    margin-left: 20px;
+    height: 180px;
+    border-radius: 50%;
+}
+
+@media (max-width: 720px){
+    .sobre>div {
+        flex-direction: column-reverse;
+    }
+    .foto-pessoal {
+        margin: 0 0 20px;
+        height: 40vh;
+    }
+}
+
+
+/* PORTFOLIO */
+
 .portfolio .grid {
     display: grid;
-    gap: 2em;
+    gap: 3em;
     justify-content: center;
 }
 
@@ -163,6 +209,8 @@ figcaption {
     text-shadow: -1px 1px 6px black;
 }
 
+/* CONTATO */
+
 .contato .icons {
     text-align: center;
 }
@@ -182,6 +230,9 @@ figcaption {
     text-shadow: -2px 2px 7px rgba(0, 0, 0, 0.829);
 }
 
+
+
+
 @media (min-width: 630px) {
     .portfolio .grid {
         grid-template-columns: 270px 270px;
@@ -192,7 +243,6 @@ figcaption {
 @media (min-width: 980px) {
     .portfolio .grid {
         grid-template-columns: 270px 270px 270px;
-        gap: 3em;
         height: calc(100vh - 48px);
         align-content: stretch;
     }
@@ -202,7 +252,6 @@ figcaption {
 
 
 /* 
-font-family: 'Gloria Hallelujah', cursive;
 font-family: 'Press Start 2P', cursive;
 font-family: 'Source Code Pro', monospace;
  */
